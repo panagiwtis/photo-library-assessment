@@ -1,0 +1,10 @@
+<button
+  class="photo-card"
+  type="button"
+  (click)="photoSelected.emit(photo())">
+  <img
+    [src]="photo().url"
+    [alt]="'Random photo ' + photo().id"
+    loading="lazy"
+  />
+</button>

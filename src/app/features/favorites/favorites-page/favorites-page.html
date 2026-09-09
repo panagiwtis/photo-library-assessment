@@ -1,0 +1,13 @@
+<section class="favorites-page">
+  @if (favorites().length > 0) {
+    <app-photo-grid
+      [photos]="favorites()"
+      (photoSelected)="onPhotoSelected($event)"
+    />
+  } @else {
+    <div class="empty-state">
+      <h1>No favorites yet</h1>
+      <p>Click a photo from the photo stream to add it to your favorites.</p>
+    </div>
+  }
+</section>

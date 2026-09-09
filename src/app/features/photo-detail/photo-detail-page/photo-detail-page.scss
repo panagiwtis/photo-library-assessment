@@ -1,0 +1,36 @@
+.photo-detail-page {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.photo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+
+  img {
+    display: block;
+    width: min(900px, 100%);
+    max-height: calc(100vh - 220px);
+    object-fit: contain;
+    border-radius: 12px;
+  }
+}
+
+.not-found {
+  padding: 64px 24px;
+  text-align: center;
+
+  h1 {
+    margin: 0 0 8px;
+    font: var(--mat-sys-headline-small);
+  }
+
+  p {
+    margin: 0;
+    color: var(--mat-sys-on-surface-variant);
+  }
+}

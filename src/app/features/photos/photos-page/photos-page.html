@@ -1,0 +1,16 @@
+<section class="photos-page">
+  <app-photo-grid
+    [photos]="photos()"
+    (photoSelected)="onPhotoSelected($event)"
+  />
+
+  @if (loading()) {
+    <app-loading-spinner />
+  }
+
+  <div
+    #loadMoreTrigger
+    class="load-more-trigger"
+    aria-hidden="true">
+  </div>
+</section>

@@ -1,0 +1,22 @@
+<section class="photo-detail-page">
+  @if (photo(); as selectedPhoto) {
+    <div class="photo-container">
+      <img
+        [src]="selectedPhoto.url"
+        [alt]="'Favorite photo ' + selectedPhoto.id"
+      />
+
+      <button
+        mat-flat-button
+        type="button"
+        (click)="removeFromFavorites()">
+        Remove from favorites
+      </button>
+    </div>
+  } @else {
+    <div class="not-found">
+      <h1>Photo not found</h1>
+      <p>This photo is not available in your favorites.</p>
+    </div>
+  }
+</section>
